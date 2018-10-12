@@ -1,0 +1,14 @@
+{
+  "name": "stlawu/di_nodes",
+  "type": "drupal-module",
+  "description": "Epic field storage for multiple content types for Digital Initiatives.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "",
+    "source": ""
+  },
+  "require": { }
+}

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains di_nodes_landing_page.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function di_nodes_landing_page_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the di_nodes_landing_page module.
+    case 'help.page.di_nodes_landing_page':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Flexible landing pages to captivate audiences.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

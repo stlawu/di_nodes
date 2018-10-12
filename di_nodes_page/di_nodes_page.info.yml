@@ -1,0 +1,5 @@
+name: 'Digital Initiatives Basic Page'
+type: module
+description: 'Neat basic page content type and fields.'
+core: 8.x
+package: 'Digital Initiatives'

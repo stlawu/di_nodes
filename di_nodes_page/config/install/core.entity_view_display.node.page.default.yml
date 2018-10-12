@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.field_last_updated
+    - field.field.node.page.field_teaser_text
+    - node.type.page
+  module:
+    - datetime
+    - text
+    - user
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_last_updated:
+    weight: 1
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'F d, Y'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  links:
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_teaser_text: true

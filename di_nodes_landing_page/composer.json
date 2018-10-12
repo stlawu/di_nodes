@@ -1,0 +1,14 @@
+{
+  "name": "stlawu/di_nodes_landing_page",
+  "type": "drupal-module",
+  "description": "Flexible landing pages to captivate audiences.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "",
+    "source": ""
+  },
+  "require": { }
+}

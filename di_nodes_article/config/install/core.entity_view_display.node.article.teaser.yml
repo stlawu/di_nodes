@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_image
+    - field.field.node.article.field_last_updated
+    - field.field.node.article.field_release_date
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_text
+    - image.style.medium
+    - node.type.article
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  field_image:
+    type: image
+    weight: -1
+    region: content
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+    label: hidden
+  field_release_date:
+    type: datetime_custom
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F d, Y'
+    third_party_settings: {  }
+  field_teaser_text:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  comment: true
+  field_last_updated: true
+  field_tags: true

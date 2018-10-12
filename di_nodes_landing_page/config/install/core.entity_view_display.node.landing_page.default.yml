@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.field_last_updated
+    - field.field.node.landing_page.field_teaser_text
+    - node.type.landing_page
+  module:
+    - datetime
+    - user
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  field_last_updated:
+    weight: 1
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'F d, Y'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_teaser_text: true

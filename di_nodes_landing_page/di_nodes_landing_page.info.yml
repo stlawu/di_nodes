@@ -1,0 +1,5 @@
+name: 'Digital Initiatives Landing Page'
+type: module
+description: 'Flexible landing pages to captivate audiences.'
+core: 8.x
+package: 'Digital Initiatives'

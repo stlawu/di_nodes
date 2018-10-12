@@ -1,0 +1,13 @@
+name: 'Digital Initiatives Nodes'
+type: module
+description: 'Epic field storage for multiple content types for Digital Initiatives.'
+core: 8.x
+package: 'Digital Initiatives'
+dependencies:
+  - datetime
+  - field
+  - node
+  - options
+  - system
+  - text
+  - user
