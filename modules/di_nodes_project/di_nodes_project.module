@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains di_nodes_project.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function di_nodes_project_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the di_nodes_project module.
+    case 'help.page.di_nodes_project':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Project content type and related fields for Digital Initiatives projects.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

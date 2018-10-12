@@ -28,5 +28,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  addtoany: true
   body: true
   field_last_updated: true

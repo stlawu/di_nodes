@@ -3,16 +3,23 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.field_last_updated
+    - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_teaser_text
     - node.type.landing_page
   module:
     - datetime
+    - metatag
     - user
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
 mode: default
 content:
+  addtoany:
+    weight: 99
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_last_updated:
     weight: 1
     label: inline
@@ -21,6 +28,13 @@ content:
       date_format: 'F d, Y'
     third_party_settings: {  }
     type: datetime_custom
+    region: content
+  field_meta_tags:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   links:
     weight: 100

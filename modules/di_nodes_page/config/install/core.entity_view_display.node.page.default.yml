@@ -4,10 +4,12 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_last_updated
+    - field.field.node.page.field_meta_tags
     - field.field.node.page.field_teaser_text
     - node.type.page
   module:
     - datetime
+    - metatag
     - text
     - user
 id: node.page.default
@@ -15,6 +17,11 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
+  addtoany:
+    weight: 99
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   body:
     label: hidden
     type: text_default
@@ -30,6 +37,13 @@ content:
       date_format: 'F d, Y'
     third_party_settings: {  }
     type: datetime_custom
+    region: content
+  field_meta_tags:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   links:
     weight: 101

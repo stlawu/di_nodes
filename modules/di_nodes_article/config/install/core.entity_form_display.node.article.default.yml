@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_last_updated
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_release_date
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser_text
@@ -16,6 +17,7 @@ dependencies:
     - datetime
     - field_group
     - image
+    - metatag
     - path
     - text
 third_party_settings:
@@ -100,6 +102,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_meta_tags:
+    weight: 121
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_release_date:
     weight: 0

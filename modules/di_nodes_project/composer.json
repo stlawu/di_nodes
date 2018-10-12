@@ -1,0 +1,14 @@
+{
+  "name": "stlawu/di_nodes_project",
+  "type": "drupal-module",
+  "description": "Project content type and related fields for Digital Initiatives projects.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "",
+    "source": ""
+  },
+  "require": { }
+}

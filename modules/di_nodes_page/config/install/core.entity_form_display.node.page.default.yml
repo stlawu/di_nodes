@@ -4,11 +4,13 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_last_updated
+    - field.field.node.page.field_meta_tags
     - field.field.node.page.field_teaser_text
     - node.type.page
   module:
     - datetime
     - field_group
+    - metatag
     - path
     - text
 third_party_settings:
@@ -78,6 +80,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_meta_tags:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_teaser_text:
     weight: 0
