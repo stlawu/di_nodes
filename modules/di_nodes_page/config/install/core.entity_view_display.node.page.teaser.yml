@@ -5,6 +5,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_last_updated
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_teaser_media
     - field.field.node.page.field_teaser_text
     - node.type.page
   module:
@@ -15,6 +17,15 @@ targetEntityType: node
 bundle: page
 mode: teaser
 content:
+  field_teaser_media:
+    type: entity_reference_entity_view
+    weight: -10
+    region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
   field_teaser_text:
     type: text_default
     weight: 0
@@ -31,3 +42,4 @@ hidden:
   addtoany: true
   body: true
   field_last_updated: true
+  field_meta_tags: true

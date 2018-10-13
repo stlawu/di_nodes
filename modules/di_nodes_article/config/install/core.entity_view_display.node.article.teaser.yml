@@ -7,8 +7,10 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_last_updated
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_release_date
     - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_media
     - field.field.node.article.field_teaser_text
     - image.style.medium
     - node.type.article
@@ -40,6 +42,15 @@ content:
       timezone_override: ''
       date_format: 'F d, Y'
     third_party_settings: {  }
+  field_teaser_media:
+    type: entity_reference_entity_view
+    weight: -10
+    region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
   field_teaser_text:
     type: text_default
     weight: 0
@@ -57,4 +68,5 @@ hidden:
   body: true
   comment: true
   field_last_updated: true
+  field_meta_tags: true
   field_tags: true

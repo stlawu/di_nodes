@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.project.body
+    - field.field.node.project.field_last_updated
+    - field.field.node.project.field_meta_tags
+    - field.field.node.project.field_project_director
+    - field.field.node.project.field_project_discipline
+    - field.field.node.project.field_project_status
+    - field.field.node.project.field_project_supporting_institu
+    - field.field.node.project.field_project_team
+    - field.field.node.project.field_project_title_full
+    - field.field.node.project.field_project_url
+    - field.field.node.project.field_teaser_media
+    - field.field.node.project.field_teaser_text
+    - node.type.project
+  module:
+    - user
+id: node.project.card
+targetEntityType: node
+bundle: project
+mode: card
+content:
+  field_project_title_full:
+    weight: -1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_teaser_media:
+    type: entity_reference_entity_view
+    weight: -10
+    region: content
+    label: hidden
+    settings:
+      view_mode: card
+      link: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_last_updated: true
+  field_meta_tags: true
+  field_project_director: true
+  field_project_discipline: true
+  field_project_status: true
+  field_project_supporting_institu: true
+  field_project_team: true
+  field_project_url: true
+  field_teaser_text: true
+  links: true

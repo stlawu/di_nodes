@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_release_date
     - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_media
     - field.field.node.article.field_teaser_text
     - image.style.large
     - node.type.article
@@ -94,4 +95,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_teaser_media: true
   field_teaser_text: true
