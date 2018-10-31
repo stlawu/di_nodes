@@ -16,9 +16,11 @@ dependencies:
     - field.field.node.person.field_person_phone
     - field.field.node.person.field_person_portrait
     - field.field.node.person.field_person_position
+    - field.field.node.person.field_teaser_text
     - node.type.person
   module:
     - name
+    - text
     - user
 id: node.person.teaser
 targetEntityType: node
@@ -27,7 +29,7 @@ mode: teaser
 content:
   field_person_department:
     type: entity_reference_label
-    weight: 2
+    weight: 3
     region: content
     label: hidden
     settings:
@@ -35,7 +37,7 @@ content:
     third_party_settings: {  }
   field_person_email:
     type: email_mailto
-    weight: 3
+    weight: 4
     region: content
     label: inline
     settings: {  }
@@ -67,11 +69,18 @@ content:
     third_party_settings: {  }
   field_person_position:
     type: string
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings:
       link_to_entity: false
+    third_party_settings: {  }
+  field_teaser_text:
+    type: text_default
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
   links:
     weight: 100

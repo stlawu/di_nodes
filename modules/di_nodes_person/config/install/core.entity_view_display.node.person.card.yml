@@ -16,9 +16,9 @@ dependencies:
     - field.field.node.person.field_person_phone
     - field.field.node.person.field_person_portrait
     - field.field.node.person.field_person_position
+    - field.field.node.person.field_teaser_text
     - node.type.person
   module:
-    - name
     - user
 id: node.person.card
 targetEntityType: node
@@ -39,22 +39,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: email_mailto
-    region: content
-  field_person_name:
-    weight: 0
-    label: hidden
-    settings:
-      format: default
-      markup: false
-      output: default
-      multiple: default
-      multiple_delimiter: ', '
-      multiple_and: text
-      multiple_delimiter_precedes_last: never
-      multiple_el_al_min: '3'
-      multiple_el_al_first: '1'
-    third_party_settings: {  }
-    type: name_default
     region: content
   field_person_portrait:
     type: entity_reference_entity_view
@@ -81,6 +65,8 @@ hidden:
   field_person_campus_mailbox: true
   field_person_fax: true
   field_person_links: true
+  field_person_name: true
   field_person_office_location: true
   field_person_phone: true
+  field_teaser_text: true
   links: true
