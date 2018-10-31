@@ -6,6 +6,7 @@ package: 'Digital Initiatives'
 dependencies:
   - datetime
   - field
+  - metatag
   - node
   - options
   - system
