@@ -3,3 +3,8 @@ type: module
 description: 'Person content type and related fields for Digital Initiatives projects.'
 core: 8.x
 package: 'Digital Initiatives'
+dependencies:
+  - di_media
+  - di_nodes
+  - name
+  - telephone
