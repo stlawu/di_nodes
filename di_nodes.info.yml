@@ -6,9 +6,16 @@ package: 'Digital Initiatives'
 dependencies:
   - datetime
   - field
+  - field_group
+  - maxlength
+  - media
+  - media_library
   - metatag
   - node
   - options
+  - path
+  - pathauto
   - system
   - text
+  - token
   - user

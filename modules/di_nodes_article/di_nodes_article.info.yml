@@ -3,3 +3,21 @@ type: module
 description: 'Snazzy article content type and fields.'
 core: 8.x
 package: 'Digital Initiatives'
+dependencies:
+  - datetime
+  - di_media
+  - di_nodes
+  - field
+  - field_group
+  - maxlength
+  - media
+  - media_library
+  - metatag
+  - node
+  - options
+  - path
+  - pathauto
+  - system
+  - text
+  - token
+  - user

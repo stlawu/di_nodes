@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.timeline.body
+    - field.field.node.timeline.field_add_slide
+    - node.type.timeline
+  module:
+    - text
+    - user
+id: node.timeline.teaser
+targetEntityType: node
+bundle: timeline
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      trim_length: 100
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_add_slide: true
+  links: true
+  di_timeline_maker_entity_view_1: true

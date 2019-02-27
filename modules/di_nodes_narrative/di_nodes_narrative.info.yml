@@ -1,0 +1,28 @@
+name: 'Digital Initiatives Narrative'
+type: module
+description: 'Narrative content type and fields.'
+core: 8.x
+package: 'Digital Initiatives'
+dependencies:
+  - color_field
+  - datetime
+  - di_media
+  - di_nodes
+  - di_paragraphs
+  - di_paragraphs_classic
+  - entity_reference_revisions
+  - field
+  - field_group
+  - maxlength
+  - media
+  - media_library
+  - metatag
+  - node
+  - options
+  - path
+  - pathauto
+  - paragraphs
+  - system
+  - text
+  - token
+  - user

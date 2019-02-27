@@ -11,6 +11,7 @@ dependencies:
   module:
     - datetime
     - field_group
+    - maxlength
     - media_library
     - metatag
     - path

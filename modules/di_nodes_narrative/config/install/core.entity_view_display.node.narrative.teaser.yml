@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.narrative.field_header_background_color
+    - field.field.node.narrative.field_header_media_element
+    - field.field.node.narrative.field_paragraph_elements
+    - field.field.node.narrative.field_subtitle
+    - node.type.narrative
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.narrative.teaser
+targetEntityType: node
+bundle: narrative
+mode: teaser
+content:
+  field_header_media_element:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: ''
+    third_party_settings: {  }
+  field_subtitle:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_header_background_color: true
+  field_paragraph_elements: true
+  links: true

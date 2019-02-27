@@ -1,0 +1,14 @@
+{
+  "name": "stlawu/di_nodes_narrative",
+  "type": "drupal-custom-module",
+  "description": "Narrative content type and fields.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/stlawu/di_nodes",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "",
+    "source": ""
+  },
+  "require": { }
+}

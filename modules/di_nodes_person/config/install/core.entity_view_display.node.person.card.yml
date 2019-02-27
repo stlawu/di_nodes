@@ -59,6 +59,7 @@ content:
     region: content
 hidden:
   addtoany: true
+  content_moderation_control: true
   field_last_updated: true
   field_meta_tags: true
   field_person_biography: true

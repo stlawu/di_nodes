@@ -2,62 +2,61 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
-    - field.field.node.article.field_image
     - field.field.node.article.field_last_updated
+    - field.field.node.article.field_media_image
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_release_date
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser_media
     - field.field.node.article.field_teaser_text
-    - image.style.large
     - node.type.article
   module:
-    - comment
     - datetime
-    - image
+    - field_group
     - metatag
     - text
     - user
+third_party_settings:
+  field_group:
+    group_aside:
+      children:
+        - field_media_image
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: Aside
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-xs-12 col-sm-6 pull-right'
+      label: Aside
+      region: content
 id: node.article.default
 targetEntityType: node
 bundle: article
 mode: default
 content:
   addtoany:
-    weight: 11
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   body:
     type: text_default
-    weight: 0
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
     label: hidden
-  comment:
-    type: comment_default
-    weight: 110
-    region: content
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-  field_image:
-    type: image
-    weight: -1
-    region: content
-    settings:
-      image_style: large
-      image_link: ''
-    third_party_settings: {  }
-    label: hidden
   field_last_updated:
-    weight: 2
+    weight: 3
     label: inline
     settings:
       timezone_override: ''
@@ -65,8 +64,17 @@ content:
     third_party_settings: {  }
     type: datetime_custom
     region: content
+  field_media_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: article
+      link: false
+    third_party_settings: {  }
+    region: content
   field_meta_tags:
-    weight: 101
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -74,7 +82,7 @@ content:
     region: content
   field_release_date:
     weight: 1
-    label: inline
+    label: hidden
     settings:
       timezone_override: ''
       date_format: 'F d, Y'
@@ -83,17 +91,19 @@ content:
     region: content
   field_tags:
     type: entity_reference_label
-    weight: 10
+    weight: 4
     region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
   links:
-    weight: 100
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  comment: true
+  content_moderation_control: true
   field_teaser_media: true
   field_teaser_text: true

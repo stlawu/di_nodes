@@ -3,3 +3,24 @@ type: module
 description: 'Flexible landing pages to captivate audiences.'
 core: 8.x
 package: 'Digital Initiatives'
+dependencies:
+  - datetime
+  - di_media
+  - di_nodes
+  - di_paragraphs
+  - entity_reference_revisions
+  - field
+  - field_group
+  - maxlength
+  - media
+  - media_library
+  - metatag
+  - node
+  - options
+  - path
+  - pathauto
+  - paragraphs
+  - system
+  - text
+  - token
+  - user

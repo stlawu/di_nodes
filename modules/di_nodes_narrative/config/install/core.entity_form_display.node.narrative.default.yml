@@ -1,0 +1,171 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.narrative.field_header_background_color
+    - field.field.node.narrative.field_header_media_element
+    - field.field.node.narrative.field_paragraph_elements
+    - field.field.node.narrative.field_subtitle
+    - node.type.narrative
+  module:
+    - color_field
+    - field_group
+    - maxlength
+    - paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_basic_info:
+      children:
+        - title
+        - field_subtitle
+      parent_name: ''
+      weight: -10
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Basic information'
+      region: content
+    group_main_content:
+      children:
+        - field_paragraph_elements
+      parent_name: ''
+      weight: -7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Main content'
+      region: content
+    group_header_content:
+      children:
+        - field_header_media_element
+        - field_header_background_color
+      parent_name: ''
+      weight: -8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Header content'
+      region: content
+id: node.narrative.default
+targetEntityType: node
+bundle: narrative
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_header_background_color:
+    type: color_field_widget_spectrum
+    weight: -2
+    region: content
+    settings:
+      show_input: '1'
+      palette: ''
+      show_buttons: '1'
+      show_palette: '0'
+      show_palette_only: '0'
+      allow_empty: '0'
+    third_party_settings: {  }
+  field_header_media_element:
+    type: entity_reference_paragraphs
+    weight: -3
+    region: content
+    settings:
+      title: 'Featured Media'
+      title_plural: 'Featured Media'
+      edit_mode: preview
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+  field_paragraph_elements:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Element
+      title_plural: Elements
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: add_above
+    third_party_settings: {  }
+  field_subtitle:
+    type: text_textarea
+    weight: -4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 280
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
+        maxlength_js_truncate_html: true
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

@@ -3,3 +3,23 @@ type: module
 description: 'Project content type and related fields for Digital Initiatives projects.'
 core: 8.x
 package: 'Digital Initiatives'
+dependencies:
+  - datetime
+  - di_media
+  - di_nodes
+  - di_nodes_person
+  - field
+  - field_group
+  - link
+  - maxlength
+  - media
+  - media_library
+  - metatag
+  - node
+  - options
+  - path
+  - pathauto
+  - system
+  - text
+  - token
+  - user

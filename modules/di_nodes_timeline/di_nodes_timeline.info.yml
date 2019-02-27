@@ -1,0 +1,30 @@
+name: 'Digital Initiatives Timeline'
+type: module
+description: 'Timeline and timeline slide content types and fields.'
+core: 8.x
+package: 'Digital Initiatives'
+dependencies:
+  - color_field
+  - datetime
+  - di_media
+  - di_nodes
+  - entity_browser
+  - entity_browser_entity_form
+  - eva
+  - field
+  - field_group
+  - inline_entity_form
+  - maxlength
+  - media
+  - media_library
+  - metatag
+  - node
+  - options
+  - path
+  - pathauto
+  - system
+  - text
+  - token
+  - user
+  - views
+  - views_timelinejs

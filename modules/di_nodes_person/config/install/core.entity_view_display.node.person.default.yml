@@ -140,5 +140,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  content_moderation_control: true
   field_person_name: true
   field_teaser_text: true

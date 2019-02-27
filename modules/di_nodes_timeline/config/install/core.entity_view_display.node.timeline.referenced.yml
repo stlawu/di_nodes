@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.referenced
+    - field.field.node.timeline.body
+    - field.field.node.timeline.field_add_slide
+    - node.type.timeline
+  module:
+    - user
+id: node.timeline.referenced
+targetEntityType: node
+bundle: timeline
+mode: referenced
+content:
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  di_timeline_maker_entity_view_1:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  content_moderation_control: true
+  field_add_slide: true

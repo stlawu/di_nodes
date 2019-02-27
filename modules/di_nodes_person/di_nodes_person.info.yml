@@ -4,7 +4,23 @@ description: 'Person content type and related fields for Digital Initiatives pro
 core: 8.x
 package: 'Digital Initiatives'
 dependencies:
+  - datetime
   - di_media
   - di_nodes
+  - field
+  - field_group
+  - link
+  - maxlength
+  - media
+  - media_library
+  - metatag
   - name
+  - node
+  - options
+  - path
+  - pathauto
+  - system
   - telephone
+  - text
+  - token
+  - user

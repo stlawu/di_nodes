@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.di_timeline_slide_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: di_timeline_slide_browser
+label: 'Timeline Slide Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: '500'
+  link_text: 'Connect Slide(s)'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  33d92bd6-db4a-42be-9586-96fb7ebcb0c6:
+    settings:
+      view: di_timeline_slide_browser
+      view_display: entity_browser_1
+      submit_text: 'Select slides'
+      auto_select: false
+    uuid: 33d92bd6-db4a-42be-9586-96fb7ebcb0c6
+    weight: 1
+    label: 'My Slides'
+    id: view
+  8227a3da-6a7a-458d-87bd-231d2c8bed7b:
+    settings:
+      view: di_timeline_slide_browser
+      view_display: entity_browser_2
+      submit_text: 'Select slides'
+      auto_select: false
+    uuid: 8227a3da-6a7a-458d-87bd-231d2c8bed7b
+    weight: 2
+    label: 'All Slides'
+    id: view
+  0f072127-a53f-4a44-9b8c-cc5af50e91a4:
+    settings:
+      entity_type: node
+      bundle: timeline_slide
+      form_mode: default
+      submit_text: 'Save entity'
+    uuid: 0f072127-a53f-4a44-9b8c-cc5af50e91a4
+    weight: 3
+    label: 'Add a New Slide'
+    id: entity_form

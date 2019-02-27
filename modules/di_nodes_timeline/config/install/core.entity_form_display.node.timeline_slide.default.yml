@@ -1,0 +1,258 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.timeline_slide.body
+    - field.field.node.timeline_slide.field_display_date
+    - field.field.node.timeline_slide.field_end_date
+    - field.field.node.timeline_slide.field_media
+    - field.field.node.timeline_slide.field_media_caption_formatted
+    - field.field.node.timeline_slide.field_start_date
+    - field.field.node.timeline_slide.field_timeline_item_bg_color
+    - field.field.node.timeline_slide.field_timeline_slide_bg_image
+    - field.field.node.timeline_slide.field_type_of_slide
+    - node.type.timeline_slide
+  module:
+    - color_field
+    - content_moderation
+    - datetime
+    - field_group
+    - media_library
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_media:
+      children:
+        - field_media
+        - group_extras
+      parent_name: group_main_content
+      weight: 4
+      format_type: html_element
+      format_settings:
+        label: Media
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: media-field-group
+        classes: ''
+      label: Media
+      region: content
+    group_date_info:
+      children:
+        - field_start_date
+        - field_end_date
+        - field_display_date
+      parent_name: group_main_content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: 'Date Info'
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: date-info-group
+        classes: ''
+      label: 'Date Info'
+      region: content
+    group_page_header:
+      children:
+        - title
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Page Header'
+      region: content
+    group_main_content:
+      children:
+        - group_date_info
+        - body
+        - group_media
+        - group_location_field_group
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Main Content'
+      region: content
+    group_extras:
+      children:
+        - field_media_caption_formatted
+      parent_name: group_media
+      weight: 15
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Caption and Citation'
+      region: content
+    group_location_field_group:
+      children: {  }
+      parent_name: group_main_content
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: false
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Geolocation
+      region: content
+    group_slide_settings:
+      children:
+        - field_type_of_slide
+        - field_timeline_item_bg_color
+        - field_timeline_slide_bg_image
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Slide Settings'
+      region: content
+id: node.timeline_slide.default
+targetEntityType: node
+bundle: timeline_slide
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_display_date:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_end_date:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_media:
+    type: media_library_widget
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_media_caption_formatted:
+    weight: 16
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_start_date:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_timeline_item_bg_color:
+    weight: 9
+    settings:
+      default_colors: "#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46\n#42D692,#16A765,#7BD148,#B3DC6C,#FBE983\n#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF\n#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2\n#CD74E6,#A47AE2"
+    third_party_settings: {  }
+    type: color_field_widget_box
+    region: content
+  field_timeline_slide_bg_image:
+    type: media_library_widget
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_type_of_slide:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  path:
+    type: path
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 10
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_media_citation_formatted: true

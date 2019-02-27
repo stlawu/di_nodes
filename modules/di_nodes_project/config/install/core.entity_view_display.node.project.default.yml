@@ -132,5 +132,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  content_moderation_control: true
   field_teaser_media: true
   field_teaser_text: true
