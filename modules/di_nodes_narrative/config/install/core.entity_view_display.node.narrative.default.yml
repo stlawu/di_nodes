@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.narrative.field_authorship
     - field.field.node.narrative.field_header_background_color
     - field.field.node.narrative.field_header_media_element
     - field.field.node.narrative.field_paragraph_elements
@@ -17,6 +18,14 @@ targetEntityType: node
 bundle: narrative
 mode: default
 content:
+  field_authorship:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_header_background_color:
     type: color_field_formatter_text
     weight: 1

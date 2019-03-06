@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.narrative.field_authorship
     - field.field.node.narrative.field_header_background_color
     - field.field.node.narrative.field_header_media_element
     - field.field.node.narrative.field_paragraph_elements
@@ -20,6 +21,7 @@ third_party_settings:
       children:
         - title
         - field_subtitle
+        - field_authorship
       parent_name: ''
       weight: -10
       format_type: fieldset
@@ -68,6 +70,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_authorship:
+    weight: -3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
   field_header_background_color:
     type: color_field_widget_spectrum
     weight: -2

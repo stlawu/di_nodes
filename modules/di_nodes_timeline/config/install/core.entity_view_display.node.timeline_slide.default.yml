@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.timeline_slide.body
+    - field.field.node.timeline_slide.field_authorship
     - field.field.node.timeline_slide.field_display_date
     - field.field.node.timeline_slide.field_end_date
     - field.field.node.timeline_slide.field_media
@@ -137,6 +138,14 @@ content:
     weight: 36
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_authorship:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_display_date:
     weight: 33

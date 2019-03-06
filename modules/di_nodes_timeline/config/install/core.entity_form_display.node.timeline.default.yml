@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.timeline.body
     - field.field.node.timeline.field_add_slide
+    - field.field.node.timeline.field_authorship
     - node.type.timeline
   module:
     - entity_browser_entity_form
@@ -16,6 +17,7 @@ third_party_settings:
     group_page_header:
       children:
         - title
+        - field_authorship
       parent_name: ''
       weight: 0
       format_type: fieldset
@@ -89,10 +91,22 @@ content:
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: di_timeline_slide_browser
     type: inline_entity_form_complex
+    region: content
+  field_authorship:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
     region: content
   path:
     type: path

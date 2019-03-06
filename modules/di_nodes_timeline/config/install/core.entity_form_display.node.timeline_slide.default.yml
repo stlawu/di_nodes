@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.timeline_slide.body
+    - field.field.node.timeline_slide.field_authorship
     - field.field.node.timeline_slide.field_display_date
     - field.field.node.timeline_slide.field_end_date
     - field.field.node.timeline_slide.field_media
@@ -14,7 +15,6 @@ dependencies:
     - node.type.timeline_slide
   module:
     - color_field
-    - content_moderation
     - datetime
     - field_group
     - media_library
@@ -66,6 +66,7 @@ third_party_settings:
     group_page_header:
       children:
         - title
+        - field_authorship
       parent_name: ''
       weight: 0
       format_type: fieldset
@@ -156,6 +157,15 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_authorship:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
     region: content
   field_display_date:
     weight: 12
@@ -254,5 +264,4 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden:
-  field_media_citation_formatted: true
+hidden: {  }
