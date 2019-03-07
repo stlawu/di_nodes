@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.person.field_meta_tags
     - field.field.node.person.field_person_biography
     - field.field.node.person.field_person_campus_mailbox
+    - field.field.node.person.field_person_class_year
     - field.field.node.person.field_person_department
     - field.field.node.person.field_person_email
     - field.field.node.person.field_person_fax
@@ -25,18 +26,131 @@ dependencies:
     - telephone
     - text
     - user
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_col0
+        - group_col1
+        - group_col2
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+      region: hidden
+    group_col0:
+      children: {  }
+      parent_name: group_row
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-xs-12 col-md-4 pull-right'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Col0
+      region: hidden
+    group_col1:
+      children: {  }
+      parent_name: group_row
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-xs-12 col-md-8'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Col1
+      region: hidden
+    group_col2:
+      children: {  }
+      parent_name: group_row
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-xs-12 col-md-4'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Col2
+      region: hidden
+    group_person_contact:
+      children:
+        - field_person_email
+        - field_person_phone
+        - field_person_fax
+        - field_person_office_location
+        - field_person_campus_mailbox
+        - field_person_links
+      parent_name: group_person_basic_info
+      weight: 6
+      format_type: html_element
+      format_settings:
+        label: 'Person contact information'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: person-contact
+      label: 'Person contact information'
+      region: content
+    group_person_basic_info:
+      children:
+        - field_person_class_year
+        - field_person_position
+        - field_person_department
+        - group_person_contact
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: 'Person basic information'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: person__info
+      label: 'Person basic information'
+      region: content
 id: node.person.default
 targetEntityType: node
 bundle: person
 mode: default
 content:
   addtoany:
-    weight: 2
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   field_last_updated:
-    weight: 1
+    weight: 14
     label: inline
     settings:
       timezone_override: ''
@@ -45,43 +159,20 @@ content:
     type: datetime_custom
     region: content
   field_meta_tags:
-    weight: 4
+    weight: 17
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_person_biography:
-    weight: 3
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_person_campus_mailbox:
-    weight: 13
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_person_department:
-    weight: 8
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_person_email:
-    weight: 9
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: email_mailto
-    region: content
-  field_person_fax:
     weight: 11
     label: inline
     settings:
@@ -89,8 +180,39 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_person_class_year:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_person_department:
+    weight: 5
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_person_email:
+    weight: 7
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_person_fax:
+    weight: 9
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_person_links:
-    weight: 14
+    weight: 12
     label: inline
     settings:
       trim_length: 80
@@ -102,7 +224,7 @@ content:
     type: link
     region: content
   field_person_office_location:
-    weight: 12
+    weight: 10
     label: inline
     settings:
       link_to_entity: false
@@ -110,7 +232,7 @@ content:
     type: string
     region: content
   field_person_phone:
-    weight: 10
+    weight: 8
     label: inline
     settings:
       title: ''
@@ -127,7 +249,7 @@ content:
     third_party_settings: {  }
     region: content
   field_person_position:
-    weight: 7
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -135,7 +257,7 @@ content:
     type: string
     region: content
   links:
-    weight: 3
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
