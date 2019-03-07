@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.timeline_slide
+    - field.field.media.video.field_media_byline_freeform
+    - field.field.media.video.field_media_copyright_status_ref
+    - field.field.media.video.field_media_description
+    - field.field.media.video.field_media_file_size
+    - field.field.media.video.field_media_mime_type
+    - field.field.media.video.field_media_transcript
+    - field.field.media.video.field_media_video_file
+    - media.type.video
+  module:
+    - file
+    - text
+id: media.video.timeline_slide
+targetEntityType: media
+bundle: video
+mode: timeline_slide
+content:
+  field_media_byline_freeform:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_transcript:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_video_file:
+    type: file_video
+    weight: 0
+    label: visually_hidden
+    settings:
+      muted: false
+      width: 640
+      height: 480
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_description: true
+  field_media_file_size: true
+  field_media_mime_type: true
+  name: true
+  thumbnail: true
+  uid: true

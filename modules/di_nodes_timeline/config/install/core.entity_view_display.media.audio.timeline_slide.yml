@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.timeline_slide
+    - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_media_byline_freeform
+    - field.field.media.audio.field_media_description
+    - field.field.media.audio.field_media_file_size
+    - field.field.media.audio.field_media_mime_type
+    - field.field.media.audio.field_media_transcript
+    - media.type.audio
+  module:
+    - file
+    - text
+id: media.audio.timeline_slide
+targetEntityType: media
+bundle: audio
+mode: timeline_slide
+content:
+  field_media_audio_file:
+    type: file_audio
+    weight: 0
+    label: visually_hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    region: content
+  field_media_byline_freeform:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_transcript:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_description: true
+  field_media_file_size: true
+  field_media_mime_type: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.timeline_slide
+label: 'Timeline slide'
+targetEntityType: media
+cache: true

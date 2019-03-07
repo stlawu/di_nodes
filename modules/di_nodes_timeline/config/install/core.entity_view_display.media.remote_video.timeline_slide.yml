@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.timeline_slide
+    - field.field.media.remote_video.field_media_author_name
+    - field.field.media.remote_video.field_media_byline_freeform
+    - field.field.media.remote_video.field_media_cache_age
+    - field.field.media.remote_video.field_media_default_name
+    - field.field.media.remote_video.field_media_description
+    - field.field.media.remote_video.field_media_height
+    - field.field.media.remote_video.field_media_html
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_media_provider_name
+    - field.field.media.remote_video.field_media_provider_url
+    - field.field.media.remote_video.field_media_resource_title
+    - field.field.media.remote_video.field_media_resource_type
+    - field.field.media.remote_video.field_media_thumbnail_height
+    - field.field.media.remote_video.field_media_thumbnail_uri
+    - field.field.media.remote_video.field_media_thumbnail_width
+    - field.field.media.remote_video.field_media_transcript
+    - field.field.media.remote_video.field_media_width
+    - media.type.remote_video
+  module:
+    - media
+    - text
+id: media.remote_video.timeline_slide
+targetEntityType: media
+bundle: remote_video
+mode: timeline_slide
+content:
+  field_media_byline_freeform:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_oembed_video:
+    type: oembed
+    weight: 0
+    label: hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    region: content
+  field_media_transcript:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_author_name: true
+  field_media_cache_age: true
+  field_media_default_name: true
+  field_media_description: true
+  field_media_height: true
+  field_media_html: true
+  field_media_provider_name: true
+  field_media_provider_url: true
+  field_media_resource_title: true
+  field_media_resource_type: true
+  field_media_thumbnail_height: true
+  field_media_thumbnail_uri: true
+  field_media_thumbnail_width: true
+  field_media_width: true
+  name: true
+  thumbnail: true
+  uid: true

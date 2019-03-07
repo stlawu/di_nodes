@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.timeline_slide
+    - field.field.media.file.field_media_byline_freeform
+    - field.field.media.file.field_media_description
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_media_file_size
+    - field.field.media.file.field_media_mime_type
+    - media.type.file
+  module:
+    - file
+    - text
+id: media.file.timeline_slide
+targetEntityType: media
+bundle: file
+mode: timeline_slide
+content:
+  field_media_byline_freeform:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_file:
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    weight: 1
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_description: true
+  field_media_file_size: true
+  field_media_mime_type: true
+  name: true
+  thumbnail: true
+  uid: true
