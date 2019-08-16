@@ -4,19 +4,19 @@ description: 'Neat basic page content type and fields.'
 core: 8.x
 package: 'Digital Initiatives'
 dependencies:
-  - datetime
-  - di_nodes
-  - field
-  - field_group
-  - maxlength
-  - media
-  - media_library
-  - metatag
-  - node
-  - options
-  - path
-  - pathauto
-  - system
-  - text
-  - token
-  - user
+  - drupal:datetime
+  - di_nodes:di_nodes
+  - drupal:field
+  - field_group:field_group
+  - maxlength:maxlength
+  - drupal:media
+  - drupal:media_library
+  - metatag:metatag
+  - drupal:node
+  - drupal:options
+  - drupal:path
+  - pathauto:pathauto
+  - drupal:system
+  - drupal:text
+  - token:token
+  - drupal:user
